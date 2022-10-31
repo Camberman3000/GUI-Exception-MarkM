@@ -38,7 +38,7 @@ namespace GUI_Exception_MarkM
             else
             {
                 string message = "You must enter a website name!";// Error message
-                string caption = "Error Detected in Input";// Error caption
+                string caption = "Error Detected in Input";// Msgbox caption
                 MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
             }
 
@@ -54,7 +54,7 @@ namespace GUI_Exception_MarkM
                 if (num <= 0)
                 {
                     string message = "Enter a number larger than 0";// Error message
-                    string caption = "Error adding to list";// Error caption
+                    string caption = "Error adding to list";// Msgbox caption
                     MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
                 }
                 else
@@ -66,7 +66,7 @@ namespace GUI_Exception_MarkM
             }
             catch (Exception ex)
             {
-                string caption = "Error adding to list";// Error caption
+                string caption = "Error adding to list";// Msgbox caption
                 MessageBox.Show(ex.ToString(), caption, MessageBoxButtons.OK);// Show message
             }
         }
@@ -75,6 +75,37 @@ namespace GUI_Exception_MarkM
         {
             listBoxNum.Items.Clear();// Clear list
         }
- 
+
+        private void buttonGoHome_Click(object sender, EventArgs e)
+        {
+            if (comboBoxBunch.SelectedIndex == -1)// No selection?
+            {
+                string message = "You 'aven't picked any bananas, Mon.";// Error message
+                string caption = "No bunches";// Msgbox caption
+                MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
+            }
+            else
+            {
+                if (radioButtonDay.Checked)
+                {
+                    string message = "Come Mr. Tally man, tally me banana, daylight come and me wanna go home.";// Error message
+                    string caption = "Work finished";// Msgbox caption
+                    MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
+                }
+                else if (radioButtonNight.Checked)
+                {
+                    string bunchSize = comboBoxBunch.SelectedItem.ToString();
+                    string message = "You've only picked a single " + bunchSize + " bunch." + " Get back to work, Mon!";
+                    string caption = "Work not finished";// Msgbox caption
+                    MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
+                }
+                else
+                {
+                    string message = "What time is it?";// Error message
+                    string caption = "You're drunk on rum";// Msgbox caption
+                    MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
+                }
+            }         
+        }
     }
 }

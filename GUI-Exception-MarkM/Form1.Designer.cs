@@ -40,8 +40,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnClearList = new System.Windows.Forms.Button();
             this.btnAddtoList = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonNight = new System.Windows.Forms.RadioButton();
+            this.radioButtonDay = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBoxBunch = new System.Windows.Forms.ComboBox();
+            this.buttonGoHome = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_OpenWebpage
@@ -157,11 +167,87 @@
             this.btnAddtoList.UseVisualStyleBackColor = true;
             this.btnAddtoList.Click += new System.EventHandler(this.btnAddtoList_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButtonNight);
+            this.groupBox1.Controls.Add(this.radioButtonDay);
+            this.groupBox1.Location = new System.Drawing.Point(21, 21);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(125, 117);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Time";
+            // 
+            // radioButtonNight
+            // 
+            this.radioButtonNight.AutoSize = true;
+            this.radioButtonNight.Location = new System.Drawing.Point(21, 68);
+            this.radioButtonNight.Name = "radioButtonNight";
+            this.radioButtonNight.Size = new System.Drawing.Size(71, 24);
+            this.radioButtonNight.TabIndex = 1;
+            this.radioButtonNight.TabStop = true;
+            this.radioButtonNight.Text = "Night";
+            this.radioButtonNight.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDay
+            // 
+            this.radioButtonDay.AutoSize = true;
+            this.radioButtonDay.Location = new System.Drawing.Point(21, 38);
+            this.radioButtonDay.Name = "radioButtonDay";
+            this.radioButtonDay.Size = new System.Drawing.Size(62, 24);
+            this.radioButtonDay.TabIndex = 0;
+            this.radioButtonDay.TabStop = true;
+            this.radioButtonDay.Text = "Day";
+            this.radioButtonDay.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.buttonGoHome);
+            this.panel3.Controls.Add(this.groupBox2);
+            this.panel3.Controls.Add(this.groupBox1);
+            this.panel3.Location = new System.Drawing.Point(111, 303);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(580, 172);
+            this.panel3.TabIndex = 8;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.comboBoxBunch);
+            this.groupBox2.Location = new System.Drawing.Point(164, 21);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 117);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Bunch";
+            // 
+            // comboBoxBunch
+            // 
+            this.comboBoxBunch.FormattingEnabled = true;
+            this.comboBoxBunch.Items.AddRange(new object[] {
+            "6 Foot",
+            "7 Foot",
+            "8 Foot"});
+            this.comboBoxBunch.Location = new System.Drawing.Point(6, 49);
+            this.comboBoxBunch.Name = "comboBoxBunch";
+            this.comboBoxBunch.Size = new System.Drawing.Size(176, 28);
+            this.comboBoxBunch.TabIndex = 0;
+            // 
+            // buttonGoHome
+            // 
+            this.buttonGoHome.Location = new System.Drawing.Point(399, 48);
+            this.buttonGoHome.Name = "buttonGoHome";
+            this.buttonGoHome.Size = new System.Drawing.Size(142, 65);
+            this.buttonGoHome.TabIndex = 9;
+            this.buttonGoHome.Text = "Go Home?";
+            this.buttonGoHome.UseVisualStyleBackColor = true;
+            this.buttonGoHome.Click += new System.EventHandler(this.buttonGoHome_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 634);
+            this.ClientSize = new System.Drawing.Size(831, 503);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
@@ -171,6 +257,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -189,6 +279,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnClearList;
         private System.Windows.Forms.Button btnAddtoList;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButtonNight;
+        private System.Windows.Forms.RadioButton radioButtonDay;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button buttonGoHome;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox comboBoxBunch;
     }
 }
 
