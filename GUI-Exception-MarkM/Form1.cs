@@ -2,6 +2,14 @@
 MS-539 - Fall 2022
 Mark Montenieri
 Week 2 assignment - Basic GUI and Exception 
+Estimated time to complete - 1hr
+
+The project took longer than expected, mostly because I wanted to make it look
+a bit nicer, even though my UI skills are marginal, at best. (It's on my todo list...)
+It also took me a bit longer to make the try/catch fail. Turns out, it was
+TryParse vs. Parse. I'm still trying to get used to switching languages,
+since most of my work the past year has been in C++ (Unreal Engine specific).
+Either way, I think the program works, and fails as intended.
  */
 
 using System;
@@ -29,7 +37,6 @@ namespace GUI_Exception_MarkM
             this.Text = "Mark M. GUI & Exception Handling ";// Window Title
             this.Location = new Point((Screen.PrimaryScreen.WorkingArea.Width - this.Width) / 2,
                           (Screen.PrimaryScreen.WorkingArea.Height - this.Height) / 2);// Center form on screen
-
         }
 
         private void btn_OpenBrowser_Click(object sender, EventArgs e)
