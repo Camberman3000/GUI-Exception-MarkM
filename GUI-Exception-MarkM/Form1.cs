@@ -63,9 +63,9 @@ namespace GUI_Exception_MarkM
             try
             {                
                 int num = int.Parse(tbTextToAddToList.Text);// Parse to int - NOTE: TryParse would work better here but for exception demo I'm using Parse
-                listBoxNum.Items.Add(num);
-                tbTextToAddToList.Text = "";
-                tbTextToAddToList.Focus();  
+                listBoxNum.Items.Add(num);// Add to list
+                tbTextToAddToList.Text = "";// Clear textbox for next entry
+                tbTextToAddToList.Focus();// Focus
             }
             catch (Exception ex)
             {
