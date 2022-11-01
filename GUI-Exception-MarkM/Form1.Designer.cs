@@ -44,9 +44,12 @@
             this.radioButtonNight = new System.Windows.Forms.RadioButton();
             this.radioButtonDay = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonGoHome = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.comboBoxBunch = new System.Windows.Forms.ComboBox();
-            this.buttonGoHome = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -105,7 +108,7 @@
             this.panel1.Controls.Add(this.tbWebsiteName);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 46);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(364, 183);
             this.panel1.TabIndex = 5;
@@ -117,7 +120,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.btnClearList);
             this.panel2.Controls.Add(this.btnAddtoList);
-            this.panel2.Location = new System.Drawing.Point(394, 12);
+            this.panel2.Location = new System.Drawing.Point(402, 46);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(402, 237);
             this.panel2.TabIndex = 6;
@@ -210,6 +213,16 @@
             this.panel3.Size = new System.Drawing.Size(580, 172);
             this.panel3.TabIndex = 8;
             // 
+            // buttonGoHome
+            // 
+            this.buttonGoHome.Location = new System.Drawing.Point(399, 48);
+            this.buttonGoHome.Name = "buttonGoHome";
+            this.buttonGoHome.Size = new System.Drawing.Size(142, 65);
+            this.buttonGoHome.TabIndex = 9;
+            this.buttonGoHome.Text = "Go Home?";
+            this.buttonGoHome.UseVisualStyleBackColor = true;
+            this.buttonGoHome.Click += new System.EventHandler(this.buttonGoHome_Click);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.comboBoxBunch);
@@ -232,21 +245,44 @@
             this.comboBoxBunch.Size = new System.Drawing.Size(176, 28);
             this.comboBoxBunch.TabIndex = 0;
             // 
-            // buttonGoHome
+            // label5
             // 
-            this.buttonGoHome.Location = new System.Drawing.Point(399, 48);
-            this.buttonGoHome.Name = "buttonGoHome";
-            this.buttonGoHome.Size = new System.Drawing.Size(142, 65);
-            this.buttonGoHome.TabIndex = 9;
-            this.buttonGoHome.Text = "Go Home?";
-            this.buttonGoHome.UseVisualStyleBackColor = true;
-            this.buttonGoHome.Click += new System.EventHandler(this.buttonGoHome_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(17, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(51, 37);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "#1";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(406, 6);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 37);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "#2";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(111, 263);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 37);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "#3";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(831, 503);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -262,6 +298,7 @@
             this.panel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -286,6 +323,9 @@
         private System.Windows.Forms.Button buttonGoHome;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox comboBoxBunch;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

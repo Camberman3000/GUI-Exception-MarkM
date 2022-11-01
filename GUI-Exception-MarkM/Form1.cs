@@ -59,23 +59,13 @@ namespace GUI_Exception_MarkM
         }
 
         private void btnAddtoList_Click(object sender, EventArgs e)
-        {
+        {           
             try
-            {
-              int num = 0;// Var
-              int.TryParse(tbTextToAddToList.Text, out num);// Try to parse text to int
-                if (num <= 0)
-                {
-                    string message = "Enter a number larger than 0";// Error message
-                    string caption = "Error adding to list";// Msgbox caption
-                    MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
-                }
-                else
-                {
-                    listBoxNum.Items.Add(num);// Add value to list
-                    tbTextToAddToList.Text = "";// Clear textbox
-                }
-               
+            {                
+                int num = int.Parse(tbTextToAddToList.Text);// Parse to int - NOTE: TryParse would work better here but for exception demo I'm using Parse
+                listBoxNum.Items.Add(num);
+                tbTextToAddToList.Text = "";
+                tbTextToAddToList.Focus();  
             }
             catch (Exception ex)
             {
