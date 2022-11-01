@@ -1,4 +1,10 @@
-﻿using System;
+﻿/**
+MS-539 - Fall 2022
+Mark Montenieri
+Week 2 assignment - Basic GUI and Exception 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -33,16 +39,23 @@ namespace GUI_Exception_MarkM
 
             if (name != "")
             {
-                System.Diagnostics.Process.Start("http://" + name + ".com");// Open website in default browser                
+                if (name.All(Char.IsLetterOrDigit))// Check for all alphanumeric
+                {
+                    System.Diagnostics.Process.Start("http://" + name + ".com");// Open website in default browser  
+                }
+                else
+                {
+                    string message = "Invalid website name! Must be letters and numbers only.";// Error message
+                    string caption = "Error Detected in Input";// Msgbox caption
+                    MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
+                }                             
             }
             else
-            {
+            {               
                 string message = "You must enter a website name!";// Error message
                 string caption = "Error Detected in Input";// Msgbox caption
                 MessageBox.Show(message, caption, MessageBoxButtons.OK);// Show message
-            }
-
-           
+            }           
         }
 
         private void btnAddtoList_Click(object sender, EventArgs e)
